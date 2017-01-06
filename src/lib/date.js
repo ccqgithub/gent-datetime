@@ -1,5 +1,5 @@
 // 获取每月的天数
-export function getMonthDates(year, month) {
+export function getMonthDays(year, month) {
   var dateNums = [31, 28, 31, 30, 31, 30, 31, 31, 30, 30, 30, 31];
   if (isLeapYear(year)) dateNums[1] = 29;
   return new Array(dateNums[month])
@@ -10,7 +10,7 @@ export function getMonthDates(year, month) {
 }
 
 // 获取每月的天数
-export function getMonthDatesByDate(date) {
+export function getMonthDaysByDate(date) {
   return getMonthDates(date.getFullYear(), date.getMonth());
 }
 
