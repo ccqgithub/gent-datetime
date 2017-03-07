@@ -1,4 +1,4 @@
-export function getDateTpl(options={}) {
+export default function renderTpl(options={}) {
   var options = Object.assign({
     year: '',
     month: '',
@@ -12,6 +12,7 @@ export function getDateTpl(options={}) {
     ],
   });
 
+  // top html
   var topHtml = `
     <div class="dtp__date-top">
       <a className="dtp__date-py">&lt;&lt;</a>
@@ -23,6 +24,7 @@ export function getDateTpl(options={}) {
     </div>
   `;
 
+  // weeks html
   var weeksHtml = `
     <tr>
       <th>日</th>
@@ -35,6 +37,7 @@ export function getDateTpl(options={}) {
     </tr>
   `;
 
+  // days html
   var daysHtml = options.days.map(function(arr) {
     var itemsHtml = arr.map(function(item) {
       return `<td>${item}</td>`;

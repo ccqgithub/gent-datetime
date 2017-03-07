@@ -6,7 +6,7 @@ var projectPath = path.join(__dirname, '../');
 // returns a Compiler instance
 webpack({
   entry: {
-    index: path.join(projectPath, 'src/pkg/index.js')
+    index: path.join(projectPath, 'src/index.js')
   },
   module: {
     loaders: [
@@ -23,6 +23,7 @@ webpack({
   output: {
     filename: '[name].js',
     path: path.join(projectPath, 'dist'),
+    library: 'Picker',
     libraryTarget: 'umd'
   }
 }, function(err, stats) {
