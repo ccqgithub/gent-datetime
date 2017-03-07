@@ -1,7 +1,7 @@
 export default function renderTpl(options={}) {
   var options = Object.assign({
-    year: '',
-    month: '',
+    year: '2017',
+    month: '12',
     days: [
       [1,2,3,4,5,6,7],
       [1,2,3,4,5,6,7],
@@ -41,7 +41,7 @@ export default function renderTpl(options={}) {
   var daysHtml = options.days.map(function(arr) {
     var itemsHtml = arr.map(function(item) {
       return `<td>${item}</td>`;
-    });
+    }).join('');
     return `<tr>${itemsHtml}</tr>`
   }).join('');
 
